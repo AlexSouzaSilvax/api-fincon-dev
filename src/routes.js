@@ -6,7 +6,7 @@ const routes = express.Router();
 
 routes.get("/", (req, res) => {
   return res.json({
-    DescricaO: "API FINCON",
+    Descricacao: "API FINCON",
     Github: "https://github.com/alexsouzasilvax/api-fincon-dev",
     Twitter: "https://twitter.com/alexsouzasilvax",
     LinkedIn: "https://www.linkedin.com/in/alexsouzasilvax/",
@@ -17,8 +17,13 @@ routes.get("/", (req, res) => {
           {
             lista: [
               {
-                method: "GET",
+                method: "POST",
                 route: "/fincon/lancamentos",
+                body: [
+                  {
+                    _idUsuario: "_idUsuario",
+                  },
+                ],
               },
             ],
             buscar: [
@@ -48,7 +53,7 @@ routes.get("/", (req, res) => {
                     mesReferencia: "String",
                     dataVencimento: "String",
                     observacao: "String",
-                    usuario: "_id",
+                    usuario: "_idUsuario",
                   },
                 ],
               },
@@ -70,7 +75,7 @@ routes.get("/", (req, res) => {
                     mesReferencia: "String",
                     dataVencimento: "String",
                     observacao: "String",
-                    usuario: "_id",
+                    usuario: "_idUsuario",
                   },
                 ],
               },
