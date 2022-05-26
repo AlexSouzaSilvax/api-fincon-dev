@@ -6,7 +6,7 @@ const routes = express.Router();
 
 routes.get("/", (req, res) => {
   return res.json({
-    Descricacao: "API FINCON",
+    Descricao: "API FINCON",
     Github: "https://github.com/alexsouzasilvax/api-fincon-dev",
     Twitter: "https://twitter.com/alexsouzasilvax",
     LinkedIn: "https://www.linkedin.com/in/alexsouzasilvax/",
